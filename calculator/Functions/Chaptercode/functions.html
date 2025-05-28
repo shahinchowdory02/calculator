@@ -20,6 +20,36 @@
 
       age = 1;
       printAge();
+
+      function generateRandomMove() {
+        let random = Math.random();
+        let randomMove = random * 3;
+        return randomMove;
+      }
+
+      let randomMove = generateRandomMove();
+
+      console.log(generateRandomMove());
+      console.log(generateRandomMove());
+      console.log(generateRandomMove());
+      console.log(generateRandomMove());
+      console.log(generateRandomMove());
+
+      function determinedriveStatus() {
+        let age = 34;
+        if (age === undefined) {
+          return "Aap Avtaar hain";
+        }
+        console.log("Checking drive status");
+        let status;
+        if (age > 18) {
+          return "You can drive";
+        } else {
+          return "Use a biCycle";
+        }
+      }
+
+      console.log(determinedriveStatus());
     </script>
   </body>
 </html>
