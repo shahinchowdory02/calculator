@@ -11,13 +11,27 @@
         name: "Jeans",
         size: "S",
         fit: "Slim Fit",
+        "delivery-time": "Same day delivry",
       };
-      let copyProduct = product;
-      console.log(product);
-      copyProduct.size = "M";
-      console.log(product);
-      copyProduct.fit = "Regular Fit";
-      console.log(product);
+      // let copyProduct = product;
+      // console.log(product);
+      // copyProduct.size = "M";
+      // console.log(product);
+      // copyProduct.fit = "Regular Fit";
+      // console.log(product);
+
+      console.log(product["delivery-time"]);
+
+      let obj = {
+        message: "Good Job",
+        status: "Complete",
+      };
+
+      console.log(obj);
+
+      let { message, status } = obj;
+      console.log(message);
+      console.log(status);
     </script>
   </body>
 </html>
