@@ -5,20 +5,47 @@
   </head>
   <body>
     <script>
-      let product = {
-        name: "TShirt",
-        price: 786,
-        rating: { stars: 4.5, noOfReviews: 453 },
-      };
-      console.log(typeof product);
-      console.log(product);
-      let str = JSON.stringify(product);
-      console.log(typeof str);
-      console.log(str);
+      // let product = {
+      //   name: "TShirt",
+      //   price: 786,
+      //   rating: { stars: 4.5, noOfReviews: 453 },
+      // };
+      // console.log(typeof product);
+      // console.log(product);
+      // let str = JSON.stringify(product);
+      // console.log(typeof str);
+      // console.log(str);
 
-      let newProdct = JSON.parse(str);
-      console.log(typeof newProdct);
-      console.log(newProdct);
+      // let newProdct = JSON.parse(str);
+      // console.log(typeof newProdct);
+      // console.log(newProdct);
+
+      // let product = {
+      //   name: "TShirt",
+      //   price: 786,
+      //   rating: { stars: 4.5, noOfReviews: 453 },
+      // };
+
+      // let product = {
+      //   name: "TShirt",
+      //   price: 786,
+      //   rating: { stars: 4.5, noOfReviews: 453 },
+      // };
+
+      // localStorage.setItem("product", JSON.stringify(product));
+
+      // console.log(localStorage.getItem("product"));
+
+      let product = {
+        name: "Tshirt",
+        price: 785,
+        rating: {
+          star: 4.5,
+          noOfReviews: 565,
+        },
+      };
+      localStorage.setItem("product", JSON.stringify(product));
+      console.log(localStorage.getItem("product"));
     </script>
   </body>
 </html>
