@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Cricket Game</title>
+    <style>
+      body {
+        text-align: center;
+        font-family: sans-serif;
+        margin-top: 50px;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 18px;
+        margin: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Bat Ball Stump Game</h1>
+
+    <button onclick="playGame('Bat')">Bat</button>
+    <button onclick="playGame('Ball')">Ball</button>
+    <button onclick="playGame('Stump')">Stump</button>
+
+    <script>
+      function playGame(userMove) {
+        const computerChoice = generateComputerChoice();
+        const resultMsg = getResult(userMove, computerChoice);
+        showResult(userMove, computerChoice, resultMsg);
+      }
+
+      function generateComputerChoice() {
+        const choices = ["Bat", "Ball", "Stump"];
+        const randomIndex = Math.floor(Math.random() * 3);
+        return choices[randomIndex];
+      }
+
+      function getResult(userMove, computerMove) {
+        if (userMove === computerMove) {
+          return "It is a tie.";
+        }
+
+        if (
+          (userMove === "Bat" && computerMove === "Ball") ||
+          (userMove === "Ball" && computerMove === "Stump") ||
+          (userMove === "Stump" && computerMove === "Bat")
+        ) {
+          return "You won!";
+        } else {
+          return "Computer won!";
+        }
+      }
+
+      function showResult(userMove, computerMove, result) {
+        alert(
+          `You chose ${userMove}.\nComputer chose ${computerMove}.\n${result}`
+        );
+      }
+    </script>
+  </body>
+</html>
