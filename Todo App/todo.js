@@ -1,14 +1,4 @@
-let todosList = [];
 function addTodo() {
-  let inputElement = document.querySelector("#todo-input");
-  let todoItem = inputElement.value;
-  todoList.push(todoItem);
-  inputElement.value = "";
-  displayItems();
-}
-function displauyItems() {
-  let displayElement = document.querySelector("#todo-items");
-  for (let i = 0; i < todoList.length; i++) {
-    displayElement.innerText = displayElement.innerText + todosList[i];
-  }
+  const input = document.getElementById("todo-input");
+  const todoText = input.value.trim();
 }
