@@ -1,4 +1,7 @@
+let todoList = [];
 function addTodo() {
-  const input = document.getElementById("todo-input");
-  const todoText = input.value.trim();
+  let inputElement = document.querySelector("#todo-input");
+  let todoItem = inputElement.value;
+  todoList.push(todoItem);
+  inputElement.value = "";
 }
