@@ -7,19 +7,14 @@
     <link rel="stylesheet" href="todo.css" />
   </head>
   <body>
-    <div
-      class="main-heading max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-md"
-    >
+    <div class="main-heading max-w-md mt-10 p-6 bg-white rounded-lg shadow-md">
       <h1 id="main-heading">Todo App</h1>
 
-      <input
-        id="todo-input"
-        class="text-center items-center justify-center"
-        type="text"
-        placeholder="Enter Todo here"
-      />
+      <input id="todo-input" type="text" placeholder="Enter Todo here" />
 
       <button onclick="addTodo()">Add</button>
+
+      <div class="todo-container"></div>
     </div>
     <script src="todo.js"></script>
   </body>
