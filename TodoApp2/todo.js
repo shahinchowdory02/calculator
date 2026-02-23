@@ -1,4 +1,4 @@
-let todoList = [];
+let todoList = ["Buy Milk", "Go to College"];
 displayItems();
 
 function addTodo() {
@@ -15,11 +15,12 @@ function displayItems() {
 
   for (let i = 0; i < todoList.length; i++) {
     newHtml += `
-    <p>${todoList[i]}</p>
-    <button>Delete</button>;   
+    <div>
+       <span>${todoList[i]}</span>
+       <button onClick = "todoList.splice(${i}, 1); displayItems();">Delete</button>;  
+    </div>
     `;
   }
-
   containerElement.innerHTML = newHtml;
 }
 
