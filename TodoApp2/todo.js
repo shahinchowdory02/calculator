@@ -1,9 +1,11 @@
-let todoList = ["Buy Milk", "Go to College"];
+let todoList = [{ item: "Buy Milk" }, { item: "Go to College" }];
 displayItems();
 
 function addTodo() {
   let inputElement = document.querySelector("#todo-input");
+  let dateElement = document.querySelector("#todo-date");
   let todoItem = inputElement.value;
+  let dateElement = dateElement.value;
   todoList.push(todoItem);
   inputElement.value = "";
   displayItems();
